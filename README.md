@@ -1,3 +1,4 @@
+Lesson 1:
 Проделанная работа:
   1. Написал Dockerfile с веб-сервером nginx, собрал образ, запушил в dockerhub
   2. Написал манифест web-pod.yaml с init контейнером для подтягивания статики в общий mountPath /app
@@ -9,3 +10,15 @@
 q: Разберитесь почему все pod в namespace kube-system восстановились после удаления. Укажите причину в описании PR
 
 a: Потому что они были восстановлены deployment'ом
+
+Lesson 2:
+Проделанная работа:
+  1. Развернул кластер через kind
+  2. Запустил под frontend с контроллером ReplicaSet
+  3. Запустил под frontend с контроллером Deployment
+  4. Произвёл обновление образа в Deployment
+  5. Сделал rollback 
+  6. Сделал два варианта обновления: "Аналог blue-green" и "Reverse Rolling Update"
+  7. Добавил Health-check probes
+  8. Создал DaemonSet манифест с node-exporter
+  9. Исправил развертку node-exporter для снятия метрик в том числе и с control-plane ноды
