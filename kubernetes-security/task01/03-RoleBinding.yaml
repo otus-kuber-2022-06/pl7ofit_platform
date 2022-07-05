@@ -2,10 +2,12 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: admin-rolebinding
+  labels:
+    lesson: "3"
+    task: "1"
 subjects:
 - kind: ServiceAccount
   name: bob
-  namespace: default
 roleRef:
   kind: ClusterRole
   name: admin
@@ -15,10 +17,12 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: block-rolebinding
+  labels:
+    lesson: "3"
+    task: "1"
 subjects:
 - kind: ServiceAccount
   name: dave
-  namespace: default
 roleRef:
   kind: ClusterRole
   name: block

@@ -2,6 +2,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: admin
+  labels:
+    lesson: "3"
+    task: "1"
 rules:
 - apiGroups: ["*"]
   resources: ["*"]
@@ -11,6 +14,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: block
+  labels:
+    lesson: "3"
+    task: "1"
 rules:
 - apiGroups: [""]
   resources: [""]
