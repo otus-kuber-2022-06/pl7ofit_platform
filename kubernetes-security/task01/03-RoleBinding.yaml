@@ -8,6 +8,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: bob
+  namespace: default
 roleRef:
   kind: ClusterRole
   name: admin
@@ -23,6 +24,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: dave
+  namespace: default
 roleRef:
   kind: ClusterRole
   name: block
