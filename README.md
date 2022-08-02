@@ -36,3 +36,12 @@ lesson 4
 
 
 
+
+Lesson 5:
+  1. Установил kind
+  2. Запустил minio
+  3. Научился создавать секреты
+  4. Научился получать секреты в окружение пода
+Запуск:
+  kind create cluster
+  kubectl apply -f kubernetes-volumes
