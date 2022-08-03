@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+
+    # for resolve problem of "empty string in Address:" i have spend 14 days of my shit life
+    # https://github.com/kubernetes/ingress-nginx/issues/7850
+    kubernetes.io/ingress.class: nginx
+
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /web
+        pathType: Prefix
+        backend:
+          service:
+            name: web-svc
+            port:
+              number: 8000
